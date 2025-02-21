@@ -37,7 +37,7 @@ const EditBook = () => {
     const data = { title, author, publishYear };
     setLoading(true);
     axios
-      .put(`http://localhost:5555/books/${id}`, data)
+      .put(`${API_BASE_URL}books/${id}`, data)
       .then(() => {
         setLoading(false);
         enqueueSnackbar("Book Edited Successfully!", { variant: "success" });
